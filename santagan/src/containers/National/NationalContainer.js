@@ -1,11 +1,7 @@
-import React from 'react';
+import React from "react";
 
 const NationalContainer = () => {
-  return (
-    <div>
-      
-    </div>
-  );
+  return <div>국립공원</div>;
 };
 
 export default NationalContainer;

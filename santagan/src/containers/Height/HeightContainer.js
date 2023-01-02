@@ -1,11 +1,7 @@
-import React from 'react';
+import React from "react";
 
 const HeightContainer = () => {
-  return (
-    <div>
-      
-    </div>
-  );
+  return <div>높이별</div>;
 };
 
 export default HeightContainer;

@@ -1,17 +1,38 @@
-import * as React from 'react';
-import Stack from '@mui/material/Stack';
-import Button from '@mui/material/Button';
+import * as React from "react";
 
-export default function ColorButtons() {
+import Button from "@mui/material/Button";
+import ButtonGroup from "@mui/material/ButtonGroup";
+import Box from "@mui/material/Box";
+
+import { Link } from "react-router-dom";
+
+export default function VariantButtonGroup() {
   return (
-    <Stack direction="row" spacing={2}>
-      <Button color="secondary">Secondary</Button>
-      <Button variant="contained" color="success">
-        Success
-      </Button>
-      <Button variant="outlined" color="error">
-        Error
-      </Button>
-    </Stack>
+    <Box
+      sx={{
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
+        "& > *": {
+          m: 1,
+        },
+      }}
+    >
+      <ButtonGroup variant="text" aria-label="text button group">
+        <Link to="/local">
+          <Button>지역별</Button>
+        </Link>
+        <Link to="/height">
+          <Button>높이순</Button>
+        </Link>
+        <Link to="/national">
+          <Button>국립공원</Button>
+        </Link>
+        <Link to="/beginner">
+          <Button>초보자라면</Button>
+        </Link>
+      </ButtonGroup>
+
+    </Box>
   );
 }
